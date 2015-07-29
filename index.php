@@ -49,7 +49,7 @@
   				<ul class="nav navbar-nav">
   					<li><a href="#Servicios">Servicios</a> 
   					<li><a href="#acerca-de-nosotros">Acerca de Nosotros</a> 
-  					<li><a href="preguntas-frecuentes.html">Preguntas Frecuentes</a> 
+  					<li><a href="preguntas-frecuentes.php">Preguntas Frecuentes</a> 
   					<li><a href="#Contactenos">Contactenos</a> 
   				</ul>
   			</div>
@@ -74,21 +74,18 @@
   						<img src="img/highway.jpg" alt="Text of the image">
   						<div class="carousel-caption">
   							<h3>Highway heading</h3>
-  							<p>This is the caption</p>
   						</div>
   					</div>
   					<div class="item">
   						<img src="img/river.jpg" alt="Text of the image">
   						<div class="carousel-caption">
   							<h3>River heading</h3>
-  							<p>This is the caption</p>
   						</div>
   					</div>
   					<div class="item">
   						<img src="img/street.jpg" alt="Text of the image">
   						<div class="carousel-caption">
   							<h3>Street heading</h3>
-  							<p>This is the caption</p>
   						</div>
   					</div>
   					<div class="item">

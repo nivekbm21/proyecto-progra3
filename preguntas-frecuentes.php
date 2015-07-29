@@ -28,15 +28,15 @@
   					<span class="icon-bar"></span>
   				</button>
 
-  				<a href="index.html" class="navbar-brand"><img alt="logo" src="img/logo.png" width="60"/img></a>
+  				<a href="index.php" class="navbar-brand"><img alt="logo" src="img/logo.png" width="60"/img></a>
   			</div><!-- Navbar Header-->
   			<div class="collapse navbar-collapse" id="navbar-collapse">
   				
   				<ul class="nav navbar-nav">
-  					<li><a href="index.html#Servicios">Servicios</a> 
-  					<li><a href="index.html#acerca-de-nosotros">Acerca de Nosotros</a> 
-  					<li><a href="preguntas-frecuentes.html">Preguntas Frecuentes</a> 
-  					<li><a href="index.html#Contactenos">Contactenos</a> 
+  					<li><a href="index.php#Servicios">Servicios</a> 
+  					<li><a href="index.php#acerca-de-nosotros">Acerca de Nosotros</a> 
+  					<li><a href="preguntas-frecuentes.php">Preguntas Frecuentes</a> 
+  					<li><a href="index.php#Contactenos">Contactenos</a> 
   				</ul>
   			</div>
   		</div><!-- End Container-->
