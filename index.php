@@ -7,20 +7,22 @@
 
 	<link rel="stylesheet" href="css/bootstrap.min.css">
 	<link rel="stylesheet" href="css/bootstrap-theme.min.css">
-    <link rel="stylesheet" href="css/styles.css">
-    <script src="https://maps.googleapis.com/maps/api/js"></script>
-    <script>
-          function initialize() {
-            var mapCanvas = document.getElementById('map-canvas');
-            var mapOptions = {
-              center: new google.maps.LatLng(9.9357431,-84.0677798),
-              zoom: 16,
-              mapTypeId: google.maps.MapTypeId.ROADMAP
-            }
-            var map = new google.maps.Map(mapCanvas, mapOptions)
+  <link rel="stylesheet" href="css/styles.css">
+  <script src="https://maps.googleapis.com/maps/api/js"></script>
+  <script type="text/javascript" src="js/jquery.js"></script>
+  <script type="text/javascript" src="js/cargaIndex.js"></script>
+  <script>
+        function initialize() {
+          var mapCanvas = document.getElementById('map-canvas');
+          var mapOptions = {
+            center: new google.maps.LatLng(9.9357431,-84.0677798),
+            zoom: 16,
+            mapTypeId: google.maps.MapTypeId.ROADMAP
           }
-          google.maps.event.addDomListener(window, 'load', initialize);
-      </script>
+          var map = new google.maps.Map(mapCanvas, mapOptions)
+        }
+        google.maps.event.addDomListener(window, 'load', initialize);
+  </script>
 </head>
 
 	<style>
@@ -47,7 +49,7 @@
   			<div class="collapse navbar-collapse" id="navbar-collapse">
   				
   				<ul class="nav navbar-nav">
-  					<li><a href="#Servicios">Servicios</a> 
+  					<li><a href="#Nuestros-Servicios">Servicios</a> 
   					<li><a href="#acerca-de-nosotros">Acerca de Nosotros</a> 
   					<li><a href="preguntas-frecuentes.php">Preguntas Frecuentes</a> 
   					<li><a href="#Contactenos">Contactenos</a> 
@@ -69,32 +71,8 @@
   					<li data-target="#screenshot-carousel" data-slide-to="2"></li>
   					<li data-target="#screenshot-carousel" data-slide-to="3"></li>
   				</ol>
-  				<div class="carousel-inner">
-  					<div class="item active">
-  						<img src="img/highway.jpg" alt="Text of the image">
-  						<div class="carousel-caption">
-  							<h3>Highway heading</h3>
-  						</div>
-  					</div>
-  					<div class="item">
-  						<img src="img/river.jpg" alt="Text of the image">
-  						<div class="carousel-caption">
-  							<h3>River heading</h3>
-  						</div>
-  					</div>
-  					<div class="item">
-  						<img src="img/street.jpg" alt="Text of the image">
-  						<div class="carousel-caption">
-  							<h3>Street heading</h3>
-  						</div>
-  					</div>
-  					<div class="item">
-  						<img src="img/painting.jpg" alt="Text of the image">
-  						<div class="carousel-caption">
-  							<h3>Painting heading</h3>
-  							<p>This is the caption</p>
-  						</div>
-  					</div>
+  				<div class="carousel-inner" id='slider_contenedor_imagen'>
+  					
 
   				</div><!-- End Carousel inner -->
   				<a href="#screenshot-carousel" class="left carousel-control" data-slide="prev">
@@ -111,46 +89,13 @@
 <!-- Servicios -->
 	<div class="container">
 		<section>
-			<div class="page-header" id="Servicios">
+			<div class="page-header" id='Nuestros-Servicios'>
   				<h2>Servicios.<small> Te ayudamos a impulsar tu Empresa.</small></h2>
   			</div><!-- End Page Header -->
 
-  			<div class="row">
-  				<div class="col-sm-8">
-  					<h3>Hospedaje</h3>
-  					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum dictum ut odio ac porta. Proin efficitur mi ut dui condimentum suscipit. Aenean quis tortor eget augue dapibus convallis a sagittis erat. Nullam luctus hendrerit faucibus. Aenean fermentum mollis nisl sed iaculis. Fusce accumsan mauris erat, eget porttitor risus iaculis quis. Integer eleifend ornare nunc, in aliquam ante tempus nec. Praesent ultricies feugiat leo at lobortis. Integer ipsum dui, auctor ut mi vitae, cursus pulvinar sapien. Aenean accumsan maximus nulla. Duis in tellus erat. Mauris pharetra ultrices lobortis.</p>
-  				</div>
-  				<div class="col-sm-4">
-  					<img src="img/imac.jpg" class="img-responsive" alt="image">
-  				</div>
-  			</div><!-- End row -->
-  			<div class="row">
-  				<div class="col-sm-8">
-  					<h3>Optimizacion de Busqueda</h3>
-  					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum dictum ut odio ac porta. Proin efficitur mi ut dui condimentum suscipit. Aenean quis tortor eget augue dapibus convallis a sagittis erat. Nullam luctus hendrerit faucibus. Aenean fermentum mollis nisl sed iaculis. Fusce accumsan mauris erat, eget porttitor risus iaculis quis. Integer eleifend ornare nunc, in aliquam ante tempus nec. Praesent ultricies feugiat leo at lobortis. Integer ipsum dui, auctor ut mi vitae, cursus pulvinar sapien. Aenean accumsan maximus nulla. Duis in tellus erat. Mauris pharetra ultrices lobortis.</p>
-  				</div>
-  				<div class="col-sm-4">
-  					<img src="img/smartphone.jpg" class="img-responsive" alt="image">
-  				</div>
-  			</div>
-  			<div class="row">
-  				<div class="col-sm-8">
-  					<h3>Mercadeo Digital</h3>
-  					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum dictum ut odio ac porta. Proin efficitur mi ut dui condimentum suscipit. Aenean quis tortor eget augue dapibus convallis a sagittis erat. Nullam luctus hendrerit faucibus. Aenean fermentum mollis nisl sed iaculis. Fusce accumsan mauris erat, eget porttitor risus iaculis quis. Integer eleifend ornare nunc, in aliquam ante tempus nec. Praesent ultricies feugiat leo at lobortis. Integer ipsum dui, auctor ut mi vitae, cursus pulvinar sapien. Aenean accumsan maximus nulla. Duis in tellus erat. Mauris pharetra ultrices lobortis.</p>
-  				</div>
-  				<div class="col-sm-4">
-  					<img src="img/user.jpg" class="img-responsive" alt="image">
-  				</div>
-  			</div>
-            <div class="row">
-  				<div class="col-sm-8">
-  					<h3>Diseño de Paginas Web</h3>
-  					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum dictum ut odio ac porta. Proin efficitur mi ut dui condimentum suscipit. Aenean quis tortor eget augue dapibus convallis a sagittis erat. Nullam luctus hendrerit faucibus. Aenean fermentum mollis nisl sed iaculis. Fusce accumsan mauris erat, eget porttitor risus iaculis quis. Integer eleifend ornare nunc, in aliquam ante tempus nec. Praesent ultricies feugiat leo at lobortis. Integer ipsum dui, auctor ut mi vitae, cursus pulvinar sapien. Aenean accumsan maximus nulla. Duis in tellus erat. Mauris pharetra ultrices lobortis.</p>
-  				</div>
-  				<div class="col-sm-4">
-  					<img src="img/user.jpg" class="img-responsive" alt="image">
-  				</div>
-  			</div>
+        <div id="Servicios">
+    			
+        </div>
 
   			<hr>
 
@@ -166,47 +111,15 @@
   			<div class="page-header" id="acerca-de-nosotros">
   				<h2>Acerca de Nosotros.<small> Historia de nuestra empresa</small></h2>
   			</div>
-			<div class="container text-center">
-  			<h1>Historia</h1>
-  			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum dictum ut odio ac porta. Proin efficitur mi ut dui condimentum suscipit. Aenean quis tortor eget augue dapibus convallis a sagittis erat. Nullam luctus hendrerit faucibus. Aenean fermentum mollis nisl sed iaculis. Fusce accumsan mauris erat, eget porttitor risus iaculis quis. Integer eleifend ornare nunc, in aliquam ante tempus nec. Praesent ultricies feugiat leo at lobortis. Integer ipsum dui, auctor ut mi vitae, cursus pulvinar sapien. Aenean accumsan maximus nulla. Duis in tellus erat. Mauris pharetra ultrices lobortis.</p>
-				<p>Fusce malesuada augue at leo consectetur, et efficitur leo varius. Ut convallis sapien et quam consectetur scelerisque. Donec sed varius odio. Duis nec leo dolor. Nunc tempor sodales lacus, non placerat mi placerat id. Etiam id ultricies odio, in viverra risus. Nulla viverra mollis tempor. Nullam scelerisque elementum ligula, eget ullamcorper tortor mollis semper. Proin mollis ligula turpis, at dictum est ultricies sed. Cras tempor ipsum in semper bibendum. Integer vel justo tincidunt, efficitur nisl vitae, posuere dui. Donec viverra ornare nisi vitae pretium. Nulla tempor imperdiet ipsum, a consequat augue.</p>
-				<p>Nam cursus neque vel erat accumsan gravida. Nulla facilisi. Proin facilisis vitae ex vitae interdum. Sed lobortis velit id est egestas tincidunt. Proin consequat turpis quis nisl commodo, sed volutpat odio tincidunt. In dictum imperdiet dui. Nullam sed dolor at tellus blandit bibendum. Cras rutrum mi quis ligula tempus pharetra. Aliquam luctus eget ante eget lacinia. Ut vulputate feugiat sapien, vel lobortis justo malesuada eu. Quisque iaculis velit mollis nibh lobortis euismod. Donec feugiat sapien enim, et feugiat risus pharetra placerat. Morbi ornare eros nec nisi auctor luctus.</p>
-				<p>Curabitur finibus tellus non purus varius, non sodales lorem viverra. Praesent enim orci, molestie vitae diam commodo, tempus mattis augue. Quisque tempor pulvinar cursus. Phasellus at justo ullamcorper, finibus dui a, vehicula est. Quisque semper in dolor at posuere. Nullam lobortis molestie sem, ut aliquam quam molestie sed. Sed pellentesque turpis nec ligula varius fermentum. Interdum et malesuada fames ac ante ipsum primis in faucibus. Ut orci nibh, aliquam ut faucibus sit amet, egestas eu quam. Phasellus a hendrerit erat. Morbi euismod risus sed massa fermentum egestas. Ut commodo eget odio nec vulputate. Vivamus volutpat lorem massa, a sagittis enim suscipit id.</p>
-				<p>Etiam eget odio posuere, lobortis odio tempus, dapibus nunc. Maecenas egestas enim at ipsum tristique, at lobortis metus accumsan. Cras nisl tortor, tincidunt et interdum sed, mollis non ante. Pellentesque id ultricies est. Maecenas tincidunt imperdiet posuere. Pellentesque pulvinar faucibus leo id iaculis. Pellentesque nunc augue, consequat facilisis condimentum a, tincidunt sit amet tellus. Aenean a ligula arcu. Aenean sollicitudin vehicula mauris. Ut porta diam id odio placerat, eu tincidunt ligula fermentum. Maecenas et efficitur eros. Quisque ac turpis rhoncus, vulputate nisl id, rhoncus lacus. Proin tincidunt vitae nunc eu tempus. Maecenas a metus molestie sem eleifend volutpat in in felis. Donec ultricies, diam pellentesque placerat maximus, leo tellus tristique sem, quis commodo lorem dui ac urna. </p>
+			<div class="container text-center" id='acerca-largo'>
+  			
   		</div><!-- End container -->
   			
   		</section>
         
-        <div class="row">
-  				<div class="col-sm-4">
-  					<div class="panel panel-default text-center">
-  						<div class="panel-body">
-  							<span class="glyphicon glyphicon-ok"></span>
-  							<h4>Vision</h4>
-  							<p>Nam velit est, tempor vel posuere et, auctor a lectus. Aenean gravida, est accumsan dictum rhoncus, lectus mi suscipit lacus, suscipit accumsan augue tellus vitae dolor. Morbi in euismod dui</p>
-  						</div>
-  					</div>
-  				</div>
-
-  				<div class="col-sm-4">
-  					<div class="panel panel-default text-center">
-  						<div class="panel-body">
-  							<span class="glyphicon glyphicon-star"></span>
-  							<h4>Mision</h4>
-  							<p>Nam velit est, tempor vel posuere et, auctor a lectus. Aenean gravida, est accumsan dictum rhoncus, lectus mi suscipit lacus, suscipit accumsan augue tellus vitae dolor. Morbi in euismod dui</p>
-  						</div>
-  					</div>
-  				</div>
-
-  				<div class="col-sm-4">
-  					<div class="panel panel-default text-center">
-  						<div class="panel-body">
-  							<span class="glyphicon glyphicon-play-circle"></span>
-  							<h4>Valores</h4>
-  							<p>Nam velit est, tempor vel posuere et, auctor a lectus. Aenean gravida, est accumsan dictum rhoncus, lectus mi suscipit lacus, suscipit accumsan augue tellus vitae dolor. Morbi in euismod dui</p>
-  						</div>
-  					</div>
-  				</div>
+      <div class="row" id='acerca-corto'>
+  				
+      </div><!--End Container-->
   	</div><!--End Container-->
 
 <!-- Contactenos -->
