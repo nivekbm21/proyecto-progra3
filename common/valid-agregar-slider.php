@@ -1,5 +1,5 @@
 <?php
-$target_dir = "../img/servicios/";
+$target_dir = "../img/";
 $target_file = $target_dir . basename($_FILES["imagen"]["name"]);
 $uploadOk = 1;
 $imageFileType = pathinfo($target_file,PATHINFO_EXTENSION);
@@ -39,7 +39,7 @@ if ($uploadOk == 0) {
     if (move_uploaded_file($_FILES["imagen"]["tmp_name"], $target_file)) {
         include 'dbConnection.php';
         $connexion= new Connect;
-        $servicios=$connexion->addServicios( $_POST["titulo"],$_POST["contenido"],"img/servicios/".basename( $_FILES["imagen"]["name"]));
+        $servicios=$connexion->addSlider( $_POST["titulo"],"img/".basename( $_FILES["imagen"]["name"]));
         header('Location: ../index.php');
     } else {
         echo "Sorry, there was an error uploading your file.";

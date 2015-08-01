@@ -201,11 +201,11 @@
             return $this->usuario;
         }
 
-        public function addAcerca_nosotros ( $titulo, $contenido)
+        public function addAcerca_nosotros ( $titulo, $contenido, $tipo, $simbolo)
         {
             try {
 
-                echo $sql = 'INSERT INTO acerca_nosotros (`titulo`,`contenido`) VALUES ("' . $titulo . '", "' . $contenido . '")';
+                echo $sql = 'INSERT INTO acerca_nosotros (`titulo`,`contenido`,`tipo`,`simbolo`) VALUES ("' . $titulo . '", "' . $contenido . '", "' . $tipo . '", "' . $simbolo . '")';
                 #exit;
                 mysqli_query($this->connectDb(), $sql);
                 
@@ -303,18 +303,6 @@
             
         }
 
-
-
-
-
-
-
-
-
-        
-
-
-       
         function __destruct()
         {
             # code...
@@ -324,10 +312,4 @@
    # $connexion= new Connect ;
     #$nosotros=$connexion->getacerca_nosotros ();
     #print_r($nosotros);
-
- 
-
-
-
-
 ?>
