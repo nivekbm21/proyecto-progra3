@@ -179,7 +179,7 @@
             return $this->slider;
         }
 
-              public function getUsuario() {
+        public function getUsuario() {
             try {
                 $sql = 'SELECT * FROM usuario';
                 $query = mysqli_query (
@@ -193,6 +193,24 @@
                     $i++;
                 }
                 return $this->usuario;
+                
+            } catch (Exception $e) {
+                echo $e->getMessage();
+            }
+            
+            return $this->usuario;
+        }
+
+        public function getUsuario_login($usuario,$contrasena) {
+            try {
+                $sql = 'SELECT * FROM usuario WHERE usuario="' . $usuario . '" and contrasena="' . md5($contrasena) . '" and estado =1';
+                $query = mysqli_query (
+                        $this->connectDb(),
+                        $sql
+                    );
+
+                $this->usuariosInfo = mysqli_fetch_assoc($query);
+                return $this->usuariosInfo;
                 
             } catch (Exception $e) {
                 echo $e->getMessage();
