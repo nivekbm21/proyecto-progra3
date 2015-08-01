@@ -69,6 +69,24 @@
             return $this->acerca_nosotros;
         }
 
+        public function getUnUsuario($id) {
+           try {
+               $sql = 'SELECT * FROM usuario WHERE id="' . $id .'"';
+               $query = mysqli_query (
+                       $this->connectDb(),
+                       $sql
+                   );
+
+               $this->usuariosInfo = mysqli_fetch_assoc($query);
+               return $this->usuariosInfo;
+               
+           } catch (Exception $e) {
+               echo $e->getMessage();
+           }
+           
+           return $this->usuario;
+       }
+
         public function getContacto() {
             try {
                 $sql = 'SELECT * FROM contacto';
