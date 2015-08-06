@@ -18,34 +18,41 @@
     </div><!-- End container -->
 
 
-<!-- Soporte Tecnico -->
+<!-- Contactenos -->
 
   <div class="container">
     <section>
-      <div class="page-header" id="Soporte">
-          <h2>Soporte.<small> Consulte a nuestros especialistas.</small></h2>
+      <div class="page-header" id="Contactenos">
+          <h2>Contactenos.<small> Realice sus Consultas y Cotizaciones.</small></h2>
         </div><!-- End Page Header -->
 
-        <div class="col-lg-8">
-            <form action="" class="form-horizontal">
+        <div class="row">
+          <div class="col-lg-4">
+            <p>Contactenos por correo o Visitenos en nuestras Oficinas</p>
+
+      <div id="map-canvas">hola</div>
+          </div>
+          
+          <div class="col-lg-8">
+            <form action="common/valid-agregar-contacto.php" class="form-horizontal" method="POST">
               <div class="form-group">
                 <label for="user-name" class="col-lg-2 control-label">Nombre</label>
                 <div class="col-lg-10">
-                  <input type="text" class="form-control" id="user-name" placeholder="Ingrese su Nombre y Apellidos">
+                  <input type="text" class="form-control" name="user-name" placeholder="Ingrese su Nombre y Apellidos">
                 </div>
               </div><!-- End form group -->
 
               <div class="form-group">
                 <label for="user-email" class="col-lg-2 control-label">Correo</label>
                 <div class="col-lg-10">
-                  <input type="text" class="form-control" id="user-email" placeholder="Ingrese la direcccion de correo electronico">
+                  <input type="email" name="user-email" class="form-control">
                 </div>
               </div><!-- End form group -->
 
               <div class="form-group">
                 <label for="user-company" class="col-lg-2 control-label">Empresa</label>
                 <div class="col-lg-10">
-                  <input type="text" class="form-control" id="user-company" placeholder="Indique el nombre de la empresa.">
+                  <input type="text" class="form-control" name="user-company" placeholder="Indique el nombre de la empresa.">
                 </div>
               </div><!-- End form group -->
 
@@ -71,6 +78,7 @@
 
     </section>
   </div>
+
 
 <?php 
   include 'footer.php';

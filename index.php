@@ -40,9 +40,6 @@
         <div id="Servicios">
     			
         </div>
-
-  			<hr>
-
   			
   			</div><!-- end row -->
 
@@ -79,18 +76,10 @@
             <p>Contactenos por correo o Visitenos en nuestras Oficinas</p>
 
 			<div id="map-canvas">hola</div>
-            
-            <!--<address>
-              <strong>Wiredwiki Pvt Ltd.</strong></br>
-              111, Malviya nagar </br>
-              Plot no. 45</br>
-              New delhi - 110017</br>
-              P: +91 9999999999
-            </address>-->
           </div>
           
           <div class="col-lg-8">
-            <form action="common/enviarcorreo.php" class="form-horizontal" method="POST">
+            <form action="common/valid-agregar-contacto.php" class="form-horizontal" method="POST">
               <div class="form-group">
                 <label for="user-name" class="col-lg-2 control-label">Nombre</label>
                 <div class="col-lg-10">

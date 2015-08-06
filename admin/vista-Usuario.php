@@ -6,9 +6,11 @@
 	    }
 	}
 	</script>
-
 <?php 
-	include 'header.php';
+  include 'header.php';
+ ?>   
+<?php if (isset($_SESSION['estado']) && $_SESSION['estado'] == '1') { ?>
+<?php 
 	include '../common/dbConnection.php';
 	$connexion= new Connect;
 	$usuario=$connexion->getUsuario();
@@ -17,8 +19,8 @@
  
  	<div class="container">
 		<section>
-			
-           <hr>
+			<hr>
+			<h2>Usuarios.<small> Te ayudamos a administrar tu informacion.</small></h2><hr>
 	       <table  class="table">
 	        <thead>
 	            <tr>
@@ -76,10 +78,11 @@
 
 		</section>
 	</div>
+<?php } else{
+  header('Location: login.php');
+  }
+?>
 
-	
 <?php 
-include 'footer.php';
+  include 'footer.php';
  ?>
-
-
