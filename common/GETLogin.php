@@ -9,7 +9,7 @@
 		$usuario=$connexion->getUsuario_login($_POST["username"],$_POST["password"]);
 
 		if (empty($usuario)){
-			header('Location: ../login.php?errorpass=error');
+			header('Location: ../admin/login.php?errorpass=error');
 		}
 		else{
 			session_start();

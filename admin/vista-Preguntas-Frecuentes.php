@@ -30,7 +30,7 @@
 	                <th>Respuesta</th>
 	                <th>Actualizar</th>
 	                <th>Eliminar</th>
-	               <td> <button  type="button" class="btn btn_default"  onClick=" window.location.href='agregar-preguntas-frecuentes.php' " ><span class="glyphicon glyphicon-plus" > </span></button></td>   </td>
+	               <td> <button  type="button" class="btn btn_default"  onClick=" window.location.href='agregar-preguntas-frecuentes.php' " ><span class="glyphicon glyphicon-zoom-in" > </span></button></td>   </td>
       
 	            </tr>
 
